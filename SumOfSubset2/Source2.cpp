@@ -624,7 +624,7 @@ void main(void)
 	// +                                                                                                  +
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	for (int fold_number = 1; fold_number <= 10; fold_number++){
-		cout << "fold" << fold_number << endl;
+		cout << "fold" << fold_number << "..." <<endl;
 		_itoa(fold_number, fold_number_str, 10);
 		strcpy(fold_path_str, "Proteins\\");
 		strcpy(fold_list_str, fold_path_str);
@@ -675,7 +675,7 @@ void main(void)
 			}
 
 
-			cout << pdb_id << "  " << number_of_beta_strands << endl;
+			//cout << pdb_id << "  " << number_of_beta_strands << endl;
 			////////read deepLearning pairing probs prediction////////////////
 			number_of_residues = (int)strlen(SS);
 			int *beta_residue_positions = new int[number_of_beta_residues];
@@ -839,7 +839,7 @@ void main(void)
 			ConformationTreeNode *curr_conformation = NULL;
 			SubsetTreeNode *curr_subset_node;
 			for (int i = 0; i < root.children.size(); i++){
-				cout << score << endl;////////////////////////////////////////
+				//cout << score << endl;////////////////////////////////////////
 				curr_subset_node = (root.children[i]);
 				curr_conformation = new ConformationTreeNode(curr_subset_node->data, number_of_beta_strands, all_strands, curr_conformation);
 				c = 0;
